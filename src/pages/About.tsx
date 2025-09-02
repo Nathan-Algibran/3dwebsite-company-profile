@@ -94,34 +94,6 @@ const About = () => {
           </motion.div>
         </div>
 
-        {/* 3D About Cards Section */}
-        <div className="h-[600px] scene-container">
-          <Canvas>
-            <PerspectiveCamera makeDefault position={[0, 0, 10]} />
-            <OrbitControls
-              enablePan={false}
-              enableZoom={true}
-              maxDistance={15}
-              minDistance={5}
-            />
-            
-            <ambientLight intensity={0.6} />
-            <directionalLight
-              position={[10, 10, 5]}
-              intensity={1.2}
-              castShadow
-            />
-            <pointLight position={[-10, -10, -10]} intensity={0.5} color="#60A5FA" />
-            
-            <Suspense fallback={null}>
-              {aboutCards.map((card, index) => (
-                <AboutCard3D key={index} {...card} />
-              ))}
-              <Environment preset="city" />
-            </Suspense>
-          </Canvas>
-        </div>
-
         {/* Company Stats */}
         <div className="container mx-auto px-6 py-16">
           <motion.div
