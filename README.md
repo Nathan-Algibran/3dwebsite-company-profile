@@ -1,73 +1,132 @@
-# Welcome to your Lovable project
+# TechCorp - Modern 3D Interactive Company Profile
 
-## Project info
+A cutting-edge company profile website built with React.js, React Three Fiber, and modern web technologies. Features immersive 3D scenes, smooth animations, and a professional design system.
 
-**URL**: https://lovable.dev/projects/95c67c9c-9369-4759-bc5a-cb953d1d273e
+## 🌟 Features
 
-## How can I edit this code?
+- **3D Interactive Elements**: Rotating globe, floating objects, and interactive 3D service cards
+- **4 Main Pages**: Home, About, Services, and Contact with unique 3D scenes
+- **Professional Design**: Clean blue/white/gray color palette with glass morphism effects
+- **Smooth Animations**: Framer Motion page transitions and element animations
+- **Responsive Design**: Optimized for desktop and mobile devices
+- **Modern Architecture**: Built with TypeScript, Tailwind CSS, and component-based structure
+- **SEO Optimized**: Proper meta tags, semantic HTML, and structured data ready
 
-There are several ways of editing your application.
+## 🚀 Technology Stack
 
-**Use Lovable**
+- **React.js** - Modern JavaScript library
+- **React Three Fiber** - 3D graphics with Three.js
+- **React Three Drei** - Useful helpers for 3D scenes
+- **Framer Motion** - Smooth animations and page transitions
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first styling
+- **Shadcn/ui** - High-quality UI components
+- **Vite** - Fast build tool and development server
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/95c67c9c-9369-4759-bc5a-cb953d1d273e) and start prompting.
+## 🎨 Design System
 
-Changes made via Lovable will be committed automatically to this repo.
+The website uses a carefully crafted design system with:
 
-**Use your preferred IDE**
+- **Primary Colors**: Professional blue tones (#3B82F6, #2563EB, #1D4ED8)
+- **Typography**: Inter font family for clean, modern text
+- **Gradients**: Subtle blue gradients for depth and visual interest
+- **Shadows**: Layered shadow system for 3D depth effects
+- **Glass Effects**: Backdrop blur and transparency for modern UI
+- **Smooth Transitions**: Cubic-bezier timing functions for professional feel
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📱 Pages Overview
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Home Page
+- Hero section with animated 3D globe
+- Floating geometric elements
+- Call-to-action buttons with hover effects
+- Auto-rotating camera controls
 
-Follow these steps:
+### About Page
+- Interactive 3D cards showing company vision, mission, and values
+- Company statistics with animated counters
+- Leadership team section
+- Smooth hover animations
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Services Page
+- 5 clickable 3D service cards
+- Modal overlays with detailed service information
+- Interactive camera controls
+- Process timeline section
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Contact Page
+- 3D contact form visualization
+- Functional contact form with validation
+- Office location and contact information
+- Interactive elements and animations
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🛠️ Installation & Setup
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd techcorp-3d-profile
+   ```
 
-**Edit a file directly in GitHub**
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-**Use GitHub Codespaces**
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🎯 Key Components
 
-## What technologies are used for this project?
+- **Navigation**: Fixed header with smooth scroll navigation
+- **Globe**: Interactive 3D globe with distortion effects
+- **ServiceCard3D**: Clickable 3D cards with hover animations
+- **FloatingElements**: Ambient 3D objects for visual interest
+- **PageTransition**: Smooth page transitions with Framer Motion
 
-This project is built with:
+## 🎮 3D Scene Controls
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Mouse/Touch**: Rotate and interact with 3D scenes
+- **Auto-rotation**: Automatic camera movement on some scenes
+- **Zoom**: Mouse wheel zoom on services page
+- **Hover Effects**: Interactive elements respond to cursor
 
-## How can I deploy this project?
+## 📊 Performance Features
 
-Simply open [Lovable](https://lovable.dev/projects/95c67c9c-9369-4759-bc5a-cb953d1d273e) and click on Share -> Publish.
+- **Lazy Loading**: 3D components load progressively
+- **Optimized Assets**: Efficient 3D geometry and materials
+- **Responsive Canvas**: 3D scenes adapt to screen sizes
+- **Smooth 60fps**: Optimized animations and rendering
 
-## Can I connect a custom domain to my Lovable project?
+## 🎨 Customization
 
-Yes, you can!
+The website is built with a modular design system. To customize:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. **Colors**: Update CSS variables in `src/index.css`
+2. **3D Elements**: Modify components in `src/components/3d/`
+3. **Content**: Update page content in `src/pages/`
+4. **Animations**: Adjust Framer Motion configs
+5. **Typography**: Change font imports in `index.html`
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 🌐 Browser Support
+
+- Chrome (recommended)
+- Firefox
+- Safari
+- Edge
+- Mobile browsers with WebGL support
+
+## 📄 License
+
+This project is built for demonstration purposes. Feel free to use as inspiration for your own projects.
+
+---
+
+Built with ❤️ using modern web technologies and 3D graphics.
