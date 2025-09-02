@@ -94,32 +94,6 @@ const Contact = () => {
           </motion.div>
         </div>
 
-        {/* 3D Contact Scene */}
-        <div className="h-[400px] scene-container mb-16">
-          <Canvas>
-            <PerspectiveCamera makeDefault position={[0, 0, 10]} />
-            <OrbitControls
-              enablePan={false}
-              enableZoom={false}
-              autoRotate
-              autoRotateSpeed={1}
-            />
-            
-            <ambientLight intensity={0.6} />
-            <directionalLight
-              position={[10, 10, 5]}
-              intensity={1.2}
-              castShadow
-            />
-            <pointLight position={[-10, 0, -5]} intensity={0.8} color="#60A5FA" />
-            
-            <Suspense fallback={null}>
-              <ContactForm3D />
-              <Environment preset="city" />
-            </Suspense>
-          </Canvas>
-        </div>
-
         {/* Contact Content */}
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
