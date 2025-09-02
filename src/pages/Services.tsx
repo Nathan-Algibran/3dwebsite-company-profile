@@ -201,6 +201,267 @@ const Services = () => {
             </div>
           </div>
         </div>
+
+        {/* Client Testimonials */}
+        <div className="container mx-auto px-6 py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient">
+              What Our Clients Say
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Don't just take our word for it - hear from some of our satisfied clients.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Alex Thompson",
+                company: "StartupCo",
+                role: "CEO",
+                testimonial: "TechCorp transformed our vision into reality. Their web development expertise helped us launch faster than we ever imagined.",
+                rating: 5
+              },
+              {
+                name: "Maria Santos",
+                company: "GlobeRetail",
+                role: "CTO",
+                testimonial: "The mobile app they built for us increased our customer engagement by 300%. Outstanding work and professional team.",
+                rating: 5
+              },
+              {
+                name: "John Davis",
+                company: "FinanceFlow",
+                role: "Founder",
+                testimonial: "Their AI solutions revolutionized our data analysis. We're now making data-driven decisions with confidence.",
+                rating: 5
+              }
+            ].map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1 + index * 0.1 }}
+                className="glass-card p-6 card-3d"
+              >
+                <div className="flex mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <div key={i} className="text-yellow-400 text-xl">★</div>
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-6 italic">
+                  "{testimonial.testimonial}"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    {testimonial.name.split(' ').map(n => n[0]).join('')}
+                  </div>
+                  <div>
+                    <p className="font-semibold">{testimonial.name}</p>
+                    <p className="text-sm text-muted-foreground">{testimonial.role} at {testimonial.company}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Portfolio Preview */}
+        <div className="bg-gradient-surface py-16">
+          <div className="container mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.2 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient">
+                Featured Projects
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Take a look at some of our recent successful projects across different industries.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "E-commerce Platform",
+                  client: "RetailMax",
+                  category: "Web Development",
+                  description: "Modern React-based e-commerce solution with real-time inventory management.",
+                  technologies: ["React", "Node.js", "MongoDB"]
+                },
+                {
+                  title: "Healthcare Mobile App",
+                  client: "MediCare Plus",
+                  category: "Mobile Development",
+                  description: "Cross-platform mobile app for patient management and telemedicine services.",
+                  technologies: ["React Native", "Firebase", "WebRTC"]
+                },
+                {
+                  title: "AI Analytics Dashboard",
+                  client: "DataInsights",
+                  category: "AI & Machine Learning",
+                  description: "Intelligent dashboard with predictive analytics and automated reporting.",
+                  technologies: ["Python", "TensorFlow", "React"]
+                },
+                {
+                  title: "Cloud Infrastructure",
+                  client: "ScaleUp Inc",
+                  category: "Cloud Solutions",
+                  description: "Scalable microservices architecture deployed on AWS with auto-scaling.",
+                  technologies: ["AWS", "Docker", "Kubernetes"]
+                },
+                {
+                  title: "Banking App Redesign",
+                  client: "SecureBank",
+                  category: "UI/UX Design",
+                  description: "Complete redesign of mobile banking app focusing on user experience.",
+                  technologies: ["Figma", "React Native", "Design System"]
+                },
+                {
+                  title: "IoT Control System",
+                  client: "SmartHome Pro",
+                  category: "IoT Development",
+                  description: "Comprehensive IoT platform for smart home automation and monitoring.",
+                  technologies: ["IoT", "Node.js", "MQTT"]
+                }
+              ].map((project, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 1.4 + index * 0.1 }}
+                  className="glass-card p-6 card-3d"
+                >
+                  <div className="h-32 bg-gradient-primary rounded-lg mb-4 flex items-center justify-center">
+                    <div className="text-white font-bold text-lg">{project.title}</div>
+                  </div>
+                  <div className="mb-2">
+                    <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">
+                      {project.category}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-3">Client: {project.client}</p>
+                  <p className="text-muted-foreground mb-4">{project.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, techIndex) => (
+                      <span key={techIndex} className="text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Pricing Tiers */}
+        <div className="container mx-auto px-6 py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient">
+              Service Packages
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Choose the perfect package for your project needs. All packages include consultation and ongoing support.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Starter",
+                price: "$5,000",
+                period: "Starting from",
+                description: "Perfect for small businesses and startups",
+                features: [
+                  "Basic Web Development",
+                  "Responsive Design",
+                  "SEO Optimization",
+                  "3 Months Support",
+                  "Basic Analytics"
+                ],
+                popular: false
+              },
+              {
+                name: "Professional",
+                price: "$15,000",
+                period: "Starting from",
+                description: "Ideal for growing businesses",
+                features: [
+                  "Advanced Web/Mobile App",
+                  "Custom UI/UX Design",
+                  "API Integration",
+                  "6 Months Support",
+                  "Advanced Analytics",
+                  "Cloud Deployment"
+                ],
+                popular: true
+              },
+              {
+                name: "Enterprise",
+                price: "Custom",
+                period: "Quote available",
+                description: "For large-scale enterprise solutions",
+                features: [
+                  "Full-Stack Development",
+                  "AI/ML Integration",
+                  "Scalable Architecture",
+                  "12 Months Support",
+                  "Dedicated Team",
+                  "24/7 Monitoring"
+                ],
+                popular: false
+              }
+            ].map((tier, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1.8 + index * 0.1 }}
+                className={`glass-card p-8 card-3d relative ${tier.popular ? 'ring-2 ring-primary' : ''}`}
+              >
+                {tier.popular && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-primary text-white px-4 py-1 rounded-full text-sm font-medium">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold mb-2">{tier.name}</h3>
+                  <div className="text-3xl font-bold text-gradient mb-1">{tier.price}</div>
+                  <p className="text-sm text-muted-foreground">{tier.period}</p>
+                </div>
+                <p className="text-muted-foreground mb-6 text-center">{tier.description}</p>
+                <ul className="space-y-3 mb-8">
+                  {tier.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center">
+                      <div className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></div>
+                      <span className="text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <button className={tier.popular ? "btn-hero w-full" : "btn-outline-hero w-full"}>
+                  Get Started
+                </button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
     </PageTransition>
   );
